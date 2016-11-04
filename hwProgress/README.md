@@ -16,7 +16,7 @@ template
 
 ```
  <div>
- 	<hw-progress :start="start" :color="color" :width="width" height="height"></my-progress>
+ 	<hw-progress :start="start" :color="color" :width="width" height="height"></hw-progress>
  </div>
 ```	
 script
