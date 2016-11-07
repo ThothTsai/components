@@ -10,12 +10,19 @@ start | Boolean|  false  | 开始倒计时
 time  | string |    5    | 倒计时间长度
 onCanSend | Boolean | false   | 控制按钮的disable属性
 show| Boolean | false   | 显示倒计时
+text| string  | '发送验证码'| 发送验证码前显示内容
+sendText|string| '已发送'| 发送验证码后显示内容
+#Events
+  名字  |  参数  | 描述
+----    | ----  | ----
+on-send       | -  |点击发送验证码后触发
+on-send-finish| -  |倒计时结束后触发
 ## demo code
 template
 
 ```
  <div>
-  <send-code @on-send="send" @on-send-finish="finish"    text="获取验证码" send-text="发完啦" :start.sync="start" :time.sync="time" :no-can-send.sync="noCanSend" :c-show.sync="show"></send-code>
+  <send-code @on-send="send" @on-send-finish="finish"    :text="text" :send-text="send-text" :start.sync="start" :time.sync="time" :no-can-send.sync="noCanSend" :c-show.sync="show"></send-code>
  <div>
  ```
  script
@@ -30,6 +37,8 @@ export default {
       time : 5,
       noCanSend : false,
       show: false,
+      text: '发送验证码',
+      send-text: '已发送'
     }
   },
   components: {
