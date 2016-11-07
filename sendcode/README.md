@@ -7,7 +7,7 @@ SendCode依赖于vux组件库中的countdown组件，在使用组件时，要保
  参数   | 类型 | 默认 | 说明
 ----- | ------ | -----  | ----
 start | Boolean|  false  | 开始倒计时
-time  | string |    5    | 倒计时间长度
+time  | string |    20    | 倒计时间长度
 onCanSend | Boolean | false   | 控制按钮的disable属性
 show| Boolean | false   | 显示倒计时
 text| string  | '发送验证码'| 发送验证码前显示内容
@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       start : false,
-      time : 5,
+      time : 5, //默认为20
       noCanSend : false,
       show: false,
       text: '发送验证码',
